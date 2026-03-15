@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrix — Diagnostics Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== LEFT SIDEBAR ==================== -->
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <!-- Brand -->
+            <div class="sidebar-brand">
+                <div class="brand-icon"><img src="logo.png" alt="Electrix Logo" class="brand-img"></div>
+                <div class="brand-text">
+                    <span class="brand-name">Electrix</span>
+                    <span class="brand-sub">know more fail less</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="sidebar-nav">
+                <!-- Intelligence Mode Section (Primary) -->
+                <button class="nav-link active" data-page="page-dashboard">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span class="nav-text">Dashboard</span>
+                </button>
+                <button class="nav-link" data-page="page-intake">
+                    <i data-lucide="upload-cloud"></i>
+                    <span class="nav-text">BOM Upload</span>
+                </button>
+                <button class="nav-link" data-page="page-assistant">
+                    <i data-lucide="sparkles"></i>
+                    <span class="nav-text">Electrix AI</span>
+                </button>
+                <button class="nav-link" data-page="page-reports">
+                    <i data-lucide="bar-chart-3"></i>
+                    <span class="nav-text">Analysis Reports</span>
+                </button>
+
+                <div class="nav-divider"></div>
+
+                <!-- Raw Mode Section (Secondary) -->
+                <button class="nav-link" data-page="page-raw">
+                    <i data-lucide="database"></i>
+                    <span class="nav-text">Raw Data Export</span>
+                </button>
+
+                <button class="nav-link" data-page="page-settings">
+                    <i data-lucide="settings"></i>
+                    <span class="nav-text">Settings</span>
+                </button>
+            </nav>
+        </div>
+
+        <!-- User Profile at Bottom -->
+        <div class="sidebar-user">
+            <div class="user-avatar"><img src="avatar.png" alt="Baelor Targaryen" class="user-img"></div>
+            <div class="user-info">
+                <span class="user-name nav-text">Baelor Targaryen</span>
+                <span class="user-role nav-text">Admin</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ==================== MAIN CONTENT AREA ==================== -->
+    <div class="main-wrapper">
+
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="topbar-btn icon-btn sidebar-toggle" id="sidebar-toggle">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="page-title-wrap">
+                    <h1 class="page-heading" id="page-heading">System Overview</h1>
+                    <p class="page-desc" id="page-desc">Real-time failure analysis and intelligence diagnostics.</p>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <div class="search-box">
+                    <i data-lucide="search" class="search-icon"></i>
+                    <input type="text" placeholder="Global search..." class="search-input">
+                </div>
+                <button class="topbar-btn">
+                    <i data-lucide="bell"></i>
+                </button>
+                <button class="topbar-btn primary-btn" id="topbar-action">
+                    <i data-lucide="download"></i>
+                    <span>Export</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Scrollable Content -->
+        <div class="content-scroll">
+
+            <!-- ========== PAGE: DASHBOARD (Intelligence Overview) ========== -->
+            <div id="page-dashboard" class="page active-page">
+                <!-- Stat Cards Row -->
+                <div class="stat-row">
+                    <div class="card stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon blue"><i data-lucide="cpu"></i></div>
+                            <span class="stat-change positive">+12.4%</span>
+                        </div>
+                        <span class="stat-label">COMPONENTS ANALYZED</span>
+                        <span class="stat-value">12,840</span>
+                        <div class="stat-bar"><div class="stat-bar-fill blue" style="width:78%"></div></div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon green"><i data-lucide="shield-check"></i></div>
+                            <span class="stat-change positive">+5.2%</span>
+                        </div>
+                        <span class="stat-label">WARRANTY SAVINGS</span>
+                        <span class="stat-value">$420.5k</span>
+                        <div class="stat-bar"><div class="stat-bar-fill green" style="width:62%"></div></div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon orange"><i data-lucide="scan-line"></i></div>
+                            <span class="stat-change negative">-2.1%</span>
+                        </div>
+                        <span class="stat-label">ACTIVE SCANS</span>
+                        <span class="stat-value">84</span>
+                        <div class="stat-bar"><div class="stat-bar-fill orange" style="width:45%"></div></div>
+                    </div>
+                </div>
+
+                <!-- Recent Analysis Batches Table -->
+                <div class="card">
+                    <div class="card-head">
+                        <h2>Recent Analysis Batches</h2>
+                        <a href="#" class="link">View All</a>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Batch ID</th>
+                                <th>Status</th>
+                                <th>Precision Rate</th>
+                                <th>Analyzed Items</th>
+                                <th>Timestamp</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mono bold">BATCH-7291</td>
+                                <td><span class="badge green">Optimized</span></td>
+                                <td>
+                                    <div class="progress-inline">
+                                        <span>99.8%</span>
+                                        <div class="mini-bar"><div class="mini-bar-fill green" style="width:99.8%"></div></div>
+                                    </div>
+                                </td>
+                                <td>1,240 units</td>
+                                <td class="muted">2 min ago</td>
+                                <td><button class="icon-btn-sm"><i data-lucide="external-link"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="mono bold">BATCH-6842</td>
+                                <td><span class="badge yellow">Warning</span></td>
+                                <td>
+                                    <div class="progress-inline">
+                                        <span>94.2%</span>
+                                        <div class="mini-bar"><div class="mini-bar-fill yellow" style="width:94.2%"></div></div>
+                                    </div>
+                                </td>
+                                <td>856 units</td>
+                                <td class="muted">14 min ago</td>
+                                <td><button class="icon-btn-sm"><i data-lucide="external-link"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="mono bold">BATCH-6105</td>
+                                <td><span class="badge green">Optimized</span></td>
+                                <td>
+                                    <div class="progress-inline">
+                                        <span>99.9%</span>
+                                        <div class="mini-bar"><div class="mini-bar-fill green" style="width:99.9%"></div></div>
+                                    </div>
+                                </td>
+                                <td>2,100 units</td>
+                                <td class="muted">1 hr ago</td>
+                                <td><button class="icon-btn-sm"><i data-lucide="external-link"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="mono bold">BATCH-5988</td>
+                                <td><span class="badge blue">Processing</span></td>
+                                <td>
+                                    <div class="progress-inline">
+                                        <span>--</span>
+                                        <div class="mini-bar"><div class="mini-bar-fill blue anim-pulse" style="width:35%"></div></div>
+                                    </div>
+                                </td>
+                                <td>420 units</td>
+                                <td class="muted">3 hr ago</td>
+                                <td><button class="icon-btn-sm"><i data-lucide="external-link"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Bottom Row: Chart + Status -->
+                <div class="bottom-row">
+                    <div class="card chart-card">
+                        <h2>Efficiency Trend</h2>
+                        <div class="chart-area" id="chart-area">
+                            <!-- CSS bar chart -->
+                        </div>
+                    </div>
+                    <div class="card status-card">
+                        <span class="status-badge-header">SYSTEM STATUS</span>
+                        <h2>All Systems Operational</h2>
+                        <p>All processing modules within normal parameters. No maintenance alerts in current cycle.</p>
+                        <div class="status-pills">
+                            <div class="status-pill-item"><span class="pill-label">UPTIME</span><span class="pill-value">99.97%</span></div>
+                            <div class="status-pill-item"><span class="pill-label">ACTIVE NODES</span><span class="pill-value">12 / 12</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== PAGE: BOM UPLOAD (Intake) ========== -->
+            <div id="page-intake" class="page">
+                <div class="card dropzone-card">
+                    <div class="drop-icon-wrap"><i data-lucide="cloud-upload"></i></div>
+                    <h3>Upload BOM Files</h3>
+                    <p class="muted">Drag and drop or click to browse. Formats: <code>.csv</code>, <code>.xlsx</code>, <code>.json</code> (max 50MB)</p>
+                    <button class="btn-primary-lg"><i data-lucide="folder-open"></i> Browse</button>
+                </div>
+
+                <div class="card mt-6">
+                    <div class="card-head">
+                        <h2>Upload History</h2>
+                    </div>
+                    <table class="data-table">
+                        <thead><tr><th>File Name</th><th>Date</th><th>Size</th><th>Status</th><th></th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td class="file-cell"><i data-lucide="file-text"></i> Production_BOM_Q4.xlsx</td>
+                                <td>Mar 12, 2026</td>
+                                <td>2.4 MB</td>
+                                <td><span class="badge green">Processed</span></td>
+                                <td><button class="icon-btn-sm"><i data-lucide="more-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="file-cell"><i data-lucide="file-text"></i> Component_Master_v3.csv</td>
+                                <td>Mar 10, 2026</td>
+                                <td>840 KB</td>
+                                <td><span class="badge yellow">Validating</span></td>
+                                <td><button class="icon-btn-sm"><i data-lucide="more-vertical"></i></button></td>
+                            </tr>
+                            <tr>
+                                <td class="file-cell"><i data-lucide="file-text"></i> Inventory_Snapshot.json</td>
+                                <td>Mar 08, 2026</td>
+                                <td>1.1 MB</td>
+                                <td><span class="badge red">Failed</span></td>
+                                <td><button class="icon-btn-sm"><i data-lucide="more-vertical"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ========== PAGE: AI ASSISTANT ========== -->
+            <div id="page-assistant" class="page ai-page-wrapper">
+                <div class="chat-card ai-premium-card">
+                    <div class="chat-header glass-header">
+                        <div class="chat-identity">
+                            <div class="ai-avatar-lg glow-avatar"><i data-lucide="sparkles"></i></div>
+                            <div>
+                                <h3>Electrix AI</h3>
+                                <span class="muted sm status-indicator"><span class="pulse-dot"></span> System Ready</span>
+                            </div>
+                        </div>
+                        <button class="btn-outline-sm glow-btn"><i data-lucide="history"></i> History</button>
+                    </div>
+                    <div class="chat-body" id="chat-body">
+                        <div class="chat-msg ai">
+                            <div class="msg-avatar ai-bg glow-avatar-sm"><i data-lucide="sparkles"></i></div>
+                            <div class="msg-content">
+                                <div class="msg-bubble-ai premium-bubble">Ready. Upload your BOM in the <strong>BOM Upload</strong> tab, then return here with your analysis request.</div>
+                                <span class="msg-time">Just now</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-footer glass-footer">
+                        <div class="chat-input-wrap premium-input">
+                            <i data-lucide="sparkles" class="input-icon"></i>
+                            <input type="text" id="chat-input" placeholder="Ask Electrix AI to analyze...">
+                            <button class="send-btn glow-send-btn" id="btn-send"><i data-lucide="send-horizontal"></i></button>
+                        </div>
+                        <span class="chat-hint">Press <strong>Enter</strong> to send &middot; Powered by Nexus Model</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== PAGE: ANALYSIS REPORTS ========== -->
+            <div id="page-reports" class="page">
+                <!-- Empty State -->
+                <div class="card empty-card" id="reports-empty">
+                    <div class="empty-icon"><i data-lucide="file-search"></i></div>
+                    <h3>No Analysis Data</h3>
+                    <p class="muted">Run an analysis via Electrix AI to generate reports.</p>
+                    <button class="btn-primary-lg" id="goto-assistant"><i data-lucide="sparkles"></i> Open Electrix AI</button>
+                </div>
+
+                <!-- Completed State -->
+                <div id="reports-done" style="display:none;">
+                    <!-- Summary stat cards -->
+                    <div class="stat-row">
+                        <div class="card stat-card">
+                            <div class="stat-header"><div class="stat-icon red"><i data-lucide="alert-triangle"></i></div></div>
+                            <span class="stat-label">CRITICAL FINDINGS</span>
+                            <span class="stat-value text-red">3</span>
+                        </div>
+                        <div class="card stat-card">
+                            <div class="stat-header"><div class="stat-icon orange"><i data-lucide="trending-down"></i></div></div>
+                            <span class="stat-label">EST. YIELD LOSS</span>
+                            <span class="stat-value">14.2%</span>
+                        </div>
+                        <div class="card stat-card">
+                            <div class="stat-header"><div class="stat-icon green"><i data-lucide="target"></i></div></div>
+                            <span class="stat-label">ANALYSIS CONFIDENCE</span>
+                            <span class="stat-value text-green">98.5%</span>
+                        </div>
+                    </div>
+
+                    <!-- Visualizations Row -->
+                    <div class="viz-row">
+                        <div class="card viz-card">
+                            <h2>Thermal Spreading Delta</h2>
+                            <div class="viz-map thermal"></div>
+                        </div>
+                        <div class="card viz-card">
+                            <h2>Stress Micro-fractures</h2>
+                            <div class="viz-map structural"></div>
+                        </div>
+                    </div>
+
+                    <!-- Remediation -->
+                    <div class="card mt-4">
+                        <div class="card-head"><h2>Remediation Blueprint</h2></div>
+                        <div class="remedy-list">
+                            <div class="remedy-item">
+                                <div class="remedy-dot red"></div>
+                                <div>
+                                    <strong>Isolate BGA U4 Ground Plane</strong>
+                                    <p class="muted">Excessive thermal coupling observed. Separate the polygon pour to reduce direct heat transfer to adjacent memory ICs.</p>
+                                </div>
+                            </div>
+                            <div class="remedy-item">
+                                <div class="remedy-dot yellow"></div>
+                                <div>
+                                    <strong>Upgrade Capacitor C12</strong>
+                                    <p class="muted">Current X5R dielectric is suffering from DC bias derating. Swap to X7R 10uF 16V variant.</p>
+                                </div>
+                            </div>
+                            <div class="remedy-item">
+                                <div class="remedy-dot green"></div>
+                                <div>
+                                    <strong>Increase Trace Routing Margin</strong>
+                                    <p class="muted">Add 4 mils of spacing between the high-speed differential pairs near the core processor block.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== PAGE: RAW DATA EXPORT ========== -->
+            <div id="page-raw" class="page">
+                <div class="card">
+                    <div class="card-head"><h2>Filter Components</h2></div>
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label>Component Type</label>
+                            <select class="select-input">
+                                <option>All Types</option>
+                                <option>MCU / Processors</option>
+                                <option>Capacitors</option>
+                                <option>Resistors</option>
+                                <option>Connectors</option>
+                                <option>Power ICs</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Device Category</label>
+                            <select class="select-input">
+                                <option>All Categories</option>
+                                <option>Consumer Electronics</option>
+                                <option>Industrial</option>
+                                <option>Automotive</option>
+                                <option>Medical</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Failure Rate %</label>
+                            <select class="select-input">
+                                <option>Any</option>
+                                <option>< 1%</option>
+                                <option>1% – 5%</option>
+                                <option>5% – 15%</option>
+                                <option>> 15% (Critical)</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Time-to-Failure</label>
+                            <select class="select-input">
+                                <option>Any</option>
+                                <option>< 1 year</option>
+                                <option>1 – 3 years</option>
+                                <option>3 – 5 years</option>
+                                <option>> 5 years</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <div class="download-info">
+                        <i data-lucide="info" class="muted"></i>
+                        <span class="muted">Filtered results will be compiled and exported. No preview available for raw exports.</span>
+                    </div>
+                    <div class="download-actions">
+                        <button class="btn-outline-lg"><i data-lucide="file-spreadsheet"></i> .XLSX</button>
+                        <button class="btn-primary-lg"><i data-lucide="file-down"></i> .CSV</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== PAGE: SETTINGS ========== -->
+            <div id="page-settings" class="page">
+                <div class="card">
+                    <div class="card-head"><h2>Profile Details</h2></div>
+                    <div class="settings-form">
+                        <div class="form-row">
+                            <div class="form-group"><label>Full Name</label><input type="text" class="text-input" value="Baelor Targaryen"></div>
+                            <div class="form-group"><label>Email Address</label><input type="text" class="text-input" value="baelor@electrix.io"></div>
+                        </div>
+                        <div class="form-actions"><button class="btn-primary-lg">Update Profile</button></div>
+                    </div>
+                </div>
+                <div class="card mt-6">
+                    <div class="card-head"><h2>Notifications</h2></div>
+                    <div class="setting-item">
+                        <div><strong>Email Alerts</strong><p class="muted sm">Receive weekly activity summaries via email.</p></div>
+                        <label class="toggle"><input type="checkbox" checked><span class="slider"></span></label>
+                    </div>
+                    <div class="setting-item">
+                        <div><strong>Desktop Notifications</strong><p class="muted sm">Enable real-time browser notifications.</p></div>
+                        <label class="toggle"><input type="checkbox"><span class="slider"></span></label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
