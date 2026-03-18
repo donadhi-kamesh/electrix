@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- ==================== LEFT SIDEBAR ==================== -->
@@ -15,7 +17,9 @@
         <div class="sidebar-top">
             <!-- Brand -->
             <div class="sidebar-brand">
-                <div class="brand-icon"><img src="logo.png" alt="Electrix Logo" class="brand-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjY2ZiY2ZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTEzIDJMMyAxNGgxMWwLTEgOGwxMC0xMmgtMTF6Ii8+PC9zdmc+'; this.onerror=null;"></div>
+                <div class="brand-icon"><img src="logo.png" alt="Electrix Logo" class="brand-img"
+                        onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjY2ZiY2ZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTEzIDJMMyAxNGgxMWwLTEgOGwxMC0xMmgtMTF6Ii8+PC9zdmc+'; this.onerror=null;">
+                </div>
                 <div class="brand-text">
                     <span class="brand-name">Electrix</span>
                     <span class="brand-sub">know more, fail less</span>
@@ -24,7 +28,9 @@
 
             <!-- Navigation -->
             <nav class="sidebar-nav">
-                <div class="nav-section-title" style="padding: 12px 24px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--md-outline); font-weight: 600; margin-top: 8px;">Workspace</div>
+                <div class="nav-section-title"
+                    style="padding: 12px 24px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--md-outline); font-weight: 600; margin-top: 8px;">
+                    Workspace</div>
                 <button class="nav-link active" data-page="page-dashboard">
                     <i data-lucide="layout-dashboard"></i>
                     <span class="nav-text">Dashboard</span>
@@ -49,7 +55,9 @@
         </div>
 
         <div class="sidebar-user">
-            <div class="user-avatar"><img src="avatar.png" alt="User" class="user-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjY2ZiY2ZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTIwIDIxdi0yYTRgMCAwIDAtNC00SDhhNCA0IDAgMCAwLTQgNHYyTTEyIDExYTQgNCAwIDEgMCAwLTggNCA0IDAgMCAwIDAgOHoiLz48L3N2Zz4=';"></div>
+            <div class="user-avatar"><img src="avatar.png" alt="User" class="user-img"
+                    onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjY2ZiY2ZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTIwIDIxdi0yYTRgMCAwIDAtNC00SDhhNCA0IDAgMCAwLTQgNHYyTTEyIDExYTQgNCAwIDEgMCAwLTggNCA0IDAgMCAwIDAgOHoiLz48L3N2Zz4=';">
+            </div>
             <div class="user-info">
                 <span class="user-name">Baelor Targaryen</span>
             </div>
@@ -153,15 +161,22 @@
                     <div class="card dropzone-card" id="drop-zone">
                         <div class="drop-icon-wrap"><i data-lucide="upload-cloud"></i></div>
                         <h3>Upload BOM for Analysis</h3>
-                        <p class="muted">Upload your Bill of Materials to analyze components for failure risks. Formats: .csv, .xlsx</p>
-                        <button class="btn-primary-lg" style="margin-top: 24px;"><i data-lucide="folder"></i> Select BOM File</button>
-                        <div id="upload-status" style="margin-top: 16px; display: none; color: var(--md-success); font-weight: 500;"></div>
+                        <p class="muted">Upload your Bill of Materials to analyze components for failure risks. Formats:
+                            .csv, .xlsx</p>
+                        <button class="btn-primary-lg" style="margin-top: 24px;"><i data-lucide="folder"></i> Select BOM
+                            File</button>
+                        <div id="upload-status"
+                            style="margin-top: 16px; display: none; color: var(--md-success); font-weight: 500;"></div>
                     </div>
                     <div class="card sample-report-card">
-                        <div class="drop-icon-wrap" style="background: var(--md-secondary-container); color: var(--md-on-secondary-container);"><i data-lucide="file-bar-chart-2"></i></div>
+                        <div class="drop-icon-wrap"
+                            style="background: var(--md-secondary-container); color: var(--md-on-secondary-container);">
+                            <i data-lucide="file-bar-chart-2"></i></div>
                         <h3>View Sample Report</h3>
-                        <p class="muted">See what a professional BOM Analysis Report looks like before uploading your own.</p>
-                        <button class="btn-outline-lg" id="btn-sample-report" style="margin-top: 24px;"><i data-lucide="eye"></i> View Sample Report</button>
+                        <p class="muted">See what a professional BOM Analysis Report looks like before uploading your
+                            own.</p>
+                        <button class="btn-outline-lg" id="btn-sample-report" style="margin-top: 24px;"><i
+                                data-lucide="eye"></i> View Sample Report</button>
                     </div>
                 </div>
 
@@ -193,7 +208,9 @@
                             </div>
                             <div class="report-meta-row">
                                 <span class="report-meta-label">Overall Risk Score</span>
-                                <span class="report-meta-value" style="color: var(--md-warning); font-weight: 600;">MEDIUM — 3 components require attention</span>
+                                <span class="report-meta-value"
+                                    style="color: var(--md-warning); font-weight: 600;">MEDIUM — 3 components require
+                                    attention</span>
                             </div>
                         </div>
                     </div>
@@ -221,24 +238,30 @@
                                     <td class="mono">HNG-PC-042</td>
                                     <td><span class="badge red">Critical</span></td>
                                     <td>9.2 / 10</td>
-                                    <td>Polycarbonate fatigue fracture after ~8,000 fold cycles. 34% of field returns traced to this component.</td>
-                                    <td>Replace with glass-fiber reinforced nylon (PA66-GF30) or zinc-alloy pivot. Estimated cost increase: $0.45/unit.</td>
+                                    <td>Polycarbonate fatigue fracture after ~8,000 fold cycles. 34% of field returns
+                                        traced to this component.</td>
+                                    <td>Replace with glass-fiber reinforced nylon (PA66-GF30) or zinc-alloy pivot.
+                                        Estimated cost increase: $0.45/unit.</td>
                                 </tr>
                                 <tr>
                                     <td class="bold color-primary">ANC Feed-Forward Mic (L)</td>
                                     <td class="mono">MIC-MEMS-FF1</td>
                                     <td><span class="badge red">Critical</span></td>
                                     <td>8.1 / 10</td>
-                                    <td>MEMS diaphragm degradation from sweat/moisture ingress. Failure rate spikes 3× in humid climates.</td>
-                                    <td>Add IP54-rated hydrophobic acoustic mesh (e.g., Gore™ membrane). Apply conformal coating to PCB around mic.</td>
+                                    <td>MEMS diaphragm degradation from sweat/moisture ingress. Failure rate spikes 3×
+                                        in humid climates.</td>
+                                    <td>Add IP54-rated hydrophobic acoustic mesh (e.g., Gore™ membrane). Apply conformal
+                                        coating to PCB around mic.</td>
                                 </tr>
                                 <tr>
                                     <td class="bold color-primary">Driver Unit (40mm)</td>
                                     <td class="mono">DRV-40-ND-V3</td>
                                     <td><span class="badge yellow">Warning</span></td>
                                     <td>5.4 / 10</td>
-                                    <td>Voice coil adhesive softening above 55°C during extended use. Minor distortion reported at high volume.</td>
-                                    <td>Switch to high-temp epoxy adhesive (rated 120°C). Add thermal pad between driver and housing.</td>
+                                    <td>Voice coil adhesive softening above 55°C during extended use. Minor distortion
+                                        reported at high volume.</td>
+                                    <td>Switch to high-temp epoxy adhesive (rated 120°C). Add thermal pad between driver
+                                        and housing.</td>
                                 </tr>
                                 <tr>
                                     <td class="bold color-primary">Battery Cell</td>
@@ -246,7 +269,8 @@
                                     <td><span class="badge green">OK</span></td>
                                     <td>2.1 / 10</td>
                                     <td>Low risk. Standard Li-ion degradation curve (>500 cycles to 80%).</td>
-                                    <td class="muted">No action needed. Implement charge-limit firmware to extend lifespan.</td>
+                                    <td class="muted">No action needed. Implement charge-limit firmware to extend
+                                        lifespan.</td>
                                 </tr>
                                 <tr>
                                     <td class="bold color-primary">Bluetooth SoC</td>
@@ -254,15 +278,18 @@
                                     <td><span class="badge green">OK</span></td>
                                     <td>1.3 / 10</td>
                                     <td>Extremely reliable. No significant field failures in database.</td>
-                                    <td class="muted">Optimal component selection. Ensure proper decoupling (100nF + 10µF) on all power pins.</td>
+                                    <td class="muted">Optimal component selection. Ensure proper decoupling (100nF +
+                                        10µF) on all power pins.</td>
                                 </tr>
                                 <tr>
                                     <td class="bold color-primary">USB-C Connector</td>
                                     <td class="mono">USBC-16P-SMD</td>
                                     <td><span class="badge green">OK</span></td>
                                     <td>2.8 / 10</td>
-                                    <td>Minor solder joint stress under repeated plug/unplug. Within acceptable range.</td>
-                                    <td class="muted">Use through-hole anchor pins for mechanical strength. Already within tolerance.</td>
+                                    <td>Minor solder joint stress under repeated plug/unplug. Within acceptable range.
+                                    </td>
+                                    <td class="muted">Use through-hole anchor pins for mechanical strength. Already
+                                        within tolerance.</td>
                                 </tr>
                                 <tr>
                                     <td class="bold color-primary">Touch Sensor Pad (R)</td>
@@ -270,15 +297,18 @@
                                     <td><span class="badge green">OK</span></td>
                                     <td>1.8 / 10</td>
                                     <td>Low risk. Occasional sensitivity drift in cold temperatures.</td>
-                                    <td class="muted">Consider auto-calibration routine in firmware for sub-zero environments.</td>
+                                    <td class="muted">Consider auto-calibration routine in firmware for sub-zero
+                                        environments.</td>
                                 </tr>
                                 <tr>
                                     <td class="bold color-primary">Ear Cushion Foam</td>
                                     <td class="mono">FOAM-PU-EC4</td>
                                     <td><span class="badge yellow">Warning</span></td>
                                     <td>4.6 / 10</td>
-                                    <td>Polyurethane degrades and flakes after 18-24 months of daily use. Cosmetic issue that drives RMA.</td>
-                                    <td>Switch to protein leather + memory foam composite. Offer replacement cushions as accessory.</td>
+                                    <td>Polyurethane degrades and flakes after 18-24 months of daily use. Cosmetic issue
+                                        that drives RMA.</td>
+                                    <td>Switch to protein leather + memory foam composite. Offer replacement cushions as
+                                        accessory.</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -294,28 +324,32 @@
                                 <div class="rec-icon"><i data-lucide="alert-triangle"></i></div>
                                 <div class="rec-body">
                                     <strong>Immediate: Replace headband hinge material</strong>
-                                    <p class="muted">This is the #1 field failure driver. Switching to PA66-GF30 or metal alloy will reduce returns by an estimated 28%.</p>
+                                    <p class="muted">This is the #1 field failure driver. Switching to PA66-GF30 or
+                                        metal alloy will reduce returns by an estimated 28%.</p>
                                 </div>
                             </div>
                             <div class="rec-item critical">
                                 <div class="rec-icon"><i data-lucide="alert-triangle"></i></div>
                                 <div class="rec-body">
                                     <strong>Immediate: Protect ANC microphones from moisture</strong>
-                                    <p class="muted">Apply hydrophobic mesh and conformal coating. Critical for tropical/humid market segments.</p>
+                                    <p class="muted">Apply hydrophobic mesh and conformal coating. Critical for
+                                        tropical/humid market segments.</p>
                                 </div>
                             </div>
                             <div class="rec-item warning">
                                 <div class="rec-icon" style="color: var(--md-warning);"><i data-lucide="info"></i></div>
                                 <div class="rec-body">
                                     <strong>Recommended: Upgrade driver adhesive</strong>
-                                    <p class="muted">Switch to high-temperature epoxy to prevent distortion under thermal stress during long listening sessions.</p>
+                                    <p class="muted">Switch to high-temperature epoxy to prevent distortion under
+                                        thermal stress during long listening sessions.</p>
                                 </div>
                             </div>
                             <div class="rec-item warning">
                                 <div class="rec-icon" style="color: var(--md-warning);"><i data-lucide="info"></i></div>
                                 <div class="rec-body">
                                     <strong>Recommended: Improve ear cushion material</strong>
-                                    <p class="muted">Protein leather composite extends cushion lifespan 2-3×, reducing cosmetic-driven RMA volume.</p>
+                                    <p class="muted">Protein leather composite extends cushion lifespan 2-3×, reducing
+                                        cosmetic-driven RMA volume.</p>
                                 </div>
                             </div>
                         </div>
@@ -329,22 +363,26 @@
                 <div class="card mb-6">
                     <div class="card-head">
                         <h2>Filter Electrix Servers Data</h2>
-                        <button class="btn-primary-lg" id="btn-export-data"><i data-lucide="download"></i> Direct Download</button>
+                        <button class="btn-primary-lg" id="btn-get-api-key"><i data-lucide="key"></i> Get API
+                            Key</button>
                     </div>
                     <div style="padding: 0 24px 24px 24px; display: flex; gap: 16px;">
-                        <select class="search-input" style="width:auto; padding: 10px 16px; border-radius: var(--shape-sm);">
+                        <select class="search-input"
+                            style="width:auto; padding: 10px 16px; border-radius: var(--shape-sm);">
                             <option>All Product Categories</option>
                             <option>Audio</option>
                             <option>Displays</option>
                             <option>Power Supplies</option>
                         </select>
-                        <select class="search-input" style="width:auto; padding: 10px 16px; border-radius: var(--shape-sm);">
+                        <select class="search-input"
+                            style="width:auto; padding: 10px 16px; border-radius: var(--shape-sm);">
                             <option>All Component Types</option>
                             <option>Capacitor</option>
                             <option>IC</option>
                             <option>Connector</option>
                         </select>
-                        <input type="text" class="search-input" placeholder="Keyword (e.g. Failure Mode)" style="width:auto; padding: 10px 16px; border-radius: var(--shape-sm);">
+                        <input type="text" class="search-input" placeholder="Keyword (e.g. Failure Mode)"
+                            style="width:auto; padding: 10px 16px; border-radius: var(--shape-sm);">
                     </div>
                 </div>
 
@@ -358,13 +396,17 @@
                         <div class="chat-bubble bot">
                             <div class="chat-avatar"><i data-lucide="bot"></i></div>
                             <div class="chat-content">
-                                <p>Hello! I am Electrix AI. I can assist you with product design, help choose reliable components, and research potential failure modes based on our 14.2M component intelligence database. Ask me anything.</p>
+                                <p>Hello! I am Electrix AI. I can assist you with product design, help choose reliable
+                                    components, and research potential failure modes based on our 14.2M component
+                                    intelligence database. Ask me anything.</p>
                             </div>
                         </div>
                     </div>
                     <div class="chat-input-area">
-                        <textarea id="ai-input" placeholder="Ask Electrix AI about product design or components..." rows="1"></textarea>
-                        <button id="ai-send-btn" class="icon-btn-sm btn-primary-lg chat-send"><i data-lucide="send"></i></button>
+                        <textarea id="ai-input" placeholder="Ask Electrix AI about product design or components..."
+                            rows="1"></textarea>
+                        <button id="ai-send-btn" class="icon-btn-sm btn-primary-lg chat-send"><i
+                                data-lucide="send"></i></button>
                     </div>
                 </div>
             </div>
@@ -375,17 +417,17 @@
                     <h2 class="text-2xl mb-2" style="font-size: 28px;">Flexible Intelligence Pricing</h2>
                     <p class="muted">Choose the plan that fits your organization's analysis needs.</p>
                 </div>
-                
+
                 <div class="pricing-grid-4">
                     <!-- Free -->
                     <div class="card pricing-card">
                         <div class="pricing-header">
-                            <h3>Free</h3>
-                            <div class="price"><span class="currency">$</span>0<span class="period">/ mo</span></div>
+                            <h3>Basic</h3>
+                            <div class="price"><span class="currency">₹</span>0<span class="period">/ mo</span></div>
                             <p class="muted sm">Pay-as-you-go report generation.</p>
                         </div>
                         <div class="pricing-features">
-                            <div class="feature"><i data-lucide="check" class="text-green"></i> Pay per report</div>
+                            <div class="feature"><i data-lucide="check" class="text-green"></i> ₹7,999 per report</div>
                             <div class="feature"><i data-lucide="x" class="muted"></i> No Electrix AI access</div>
                             <div class="feature"><i data-lucide="x" class="muted"></i> No Raw Data access</div>
                         </div>
@@ -396,13 +438,16 @@
                     <div class="card pricing-card">
                         <div class="pricing-header">
                             <h3>Pro</h3>
-                            <div class="price" style="font-size: 24px; line-height:36px; margin: 16px 0;">For Individuals</div>
+                            <div class="price"><span class="currency">₹</span>31,999<span class="period">/ mo</span>
+                            </div>
                             <p class="muted sm">For individual designers and engineers.</p>
                         </div>
                         <div class="pricing-features">
-                            <div class="feature"><i data-lucide="check" class="text-green"></i> 5 reports per month</div>
+                            <div class="feature"><i data-lucide="check" class="text-green"></i> 5 reports per month
+                            </div>
                             <div class="feature"><i data-lucide="check" class="text-green"></i> Electrix AI Access</div>
-                            <div class="feature"><i data-lucide="check" class="text-green"></i> Price per report (after 5)</div>
+                            <div class="feature"><i data-lucide="check" class="text-green"></i> ₹5,999 per report (after
+                                5)</div>
                             <div class="feature"><i data-lucide="x" class="muted"></i> No Raw Data access</div>
                         </div>
                         <button class="btn-outline-lg w-100 mt-auto">Upgrade to Pro</button>
@@ -413,15 +458,20 @@
                         <div class="popular-badge">For Organizations</div>
                         <div class="pricing-header">
                             <h3>Ultra</h3>
-                            <div class="price" style="font-size: 24px; line-height:36px; margin: 16px 0;">Business Scale</div>
+                            <div class="price"><span class="currency">₹</span>1,89,999<span class="period">/ mo</span>
+                            </div>
                             <p class="muted sm">Deep insights combined with raw metrics.</p>
                         </div>
                         <div class="pricing-features">
                             <div class="feature"><i data-lucide="check" class="text-primary"></i> Up to 40 reports</div>
-                            <div class="feature"><i data-lucide="check" class="text-primary"></i> <strong>Raw Data Access</strong></div>
-                            <div class="feature"><i data-lucide="check" class="text-primary"></i> 128k Tokens/time on raw data</div>
-                            <div class="feature"><i data-lucide="check" class="text-primary"></i> Electrix AI Access</div>
-                            <div class="feature"><i data-lucide="check" class="text-primary"></i> Price per report (after 40)</div>
+                            <div class="feature"><i data-lucide="check" class="text-primary"></i> <strong>Raw Data
+                                    Access</strong></div>
+                            <div class="feature"><i data-lucide="check" class="text-primary"></i> 128k Tokens/time on
+                                raw data</div>
+                            <div class="feature"><i data-lucide="check" class="text-primary"></i> Electrix AI Access
+                            </div>
+                            <div class="feature"><i data-lucide="check" class="text-primary"></i> ₹3,999 per report
+                                (after 40)</div>
                         </div>
                         <button class="btn-primary-lg w-100 mt-auto">Upgrade to Ultra</button>
                     </div>
@@ -430,16 +480,22 @@
                     <div class="card pricing-card border-glow" style="border: 2px solid var(--md-primary);">
                         <div class="pricing-header">
                             <h3>Unlimited</h3>
-                            <div class="price" style="font-size: 24px; line-height:36px; margin: 16px 0;">Enterprise</div>
+                            <div class="price" style="font-size: 24px; line-height:36px; margin: 16px 0;">Enterprise
+                            </div>
                             <p class="muted sm">Unrestricted scale for enterprise workflows.</p>
                         </div>
                         <div class="pricing-features">
-                            <div class="feature"><i data-lucide="check" class="text-green"></i> <strong>Unlimited</strong> reports</div>
-                            <div class="feature"><i data-lucide="check" class="text-green"></i> Full Raw Data Access</div>
-                            <div class="feature"><i data-lucide="check" class="text-green"></i> <strong>1M Tokens/time</strong> on raw data</div>
-                            <div class="feature"><i data-lucide="check" class="text-green"></i> Priority Electrix AI</div>
+                            <div class="feature"><i data-lucide="check" class="text-green"></i>
+                                <strong>Unlimited</strong> reports</div>
+                            <div class="feature"><i data-lucide="check" class="text-green"></i> Full Raw Data Access
+                            </div>
+                            <div class="feature"><i data-lucide="check" class="text-green"></i> <strong>1M
+                                    Tokens/time</strong> on raw data</div>
+                            <div class="feature"><i data-lucide="check" class="text-green"></i> Priority Electrix AI
+                            </div>
                         </div>
-                        <button class="btn-outline-lg w-100 mt-auto text-primary" style="border-color: var(--md-primary);">Contact Sales</button>
+                        <button class="btn-outline-lg w-100 mt-auto text-primary"
+                            style="border-color: var(--md-primary);">Contact Sales</button>
                     </div>
                 </div>
             </div>
@@ -450,4 +506,5 @@
     <!-- Script Links -->
     <script src="main.js"></script>
 </body>
+
 </html>

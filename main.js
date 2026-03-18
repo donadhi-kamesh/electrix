@@ -151,23 +151,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================================================
-    //  RAW DATA: MOCK DOWNLOAD
+    //  RAW DATA: MOCK API KEY
     // ==========================================================================
-    const btnExport = document.getElementById('btn-export-data');
-    if(btnExport) {
-        btnExport.addEventListener('click', () => {
-            btnExport.innerHTML = '<i data-lucide="check"></i> Downloaded';
-            btnExport.classList.add('green');
-            btnExport.style.background = 'var(--md-success)';
-            btnExport.style.color = '#000';
+    const btnApiKey = document.getElementById('btn-get-api-key');
+    if(btnApiKey) {
+        btnApiKey.addEventListener('click', () => {
+            btnApiKey.innerHTML = '<i data-lucide="check"></i> API Key Generated';
+            btnApiKey.classList.add('green');
+            btnApiKey.style.background = 'var(--md-success)';
+            btnApiKey.style.color = '#000';
             lucide.createIcons();
             
             setTimeout(() => {
-                btnExport.innerHTML = '<i data-lucide="download"></i> Direct Download';
-                btnExport.style.background = '';
-                btnExport.style.color = '';
-                btnExport.classList.remove('green');
+                btnApiKey.innerHTML = '<i data-lucide="key"></i> Get API Key';
+                btnApiKey.style.background = '';
+                btnApiKey.style.color = '';
+                btnApiKey.classList.remove('green');
                 lucide.createIcons();
+                
+                alert('Your Production API Key has been sent to your registered business email.');
             }, 2000);
         });
     }
